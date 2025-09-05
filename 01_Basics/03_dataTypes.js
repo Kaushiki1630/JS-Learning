@@ -12,3 +12,5 @@ console.log(typeof 200);
 console.log(typeof age);
 console.log(typeof null);   // the datatype of null is object, not null itself whereas the datatype of the undefined is undefined (itself)
 console.log(typeof undefined);
+console.log(typeof undefined);
+
