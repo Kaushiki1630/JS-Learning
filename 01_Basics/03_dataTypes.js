@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // alert(3+3);   // this does not work in the node.js
 // This alert will work in browser console
