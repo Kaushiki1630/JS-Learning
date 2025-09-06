@@ -15,7 +15,7 @@ const anotherId = Symbol('123');
 
 const bigNumber = 32587328213950813123n;
 
-console.log(typeof bigNumber);
+//console.log(typeof bigNumber);
 
 
 // the return type of primitives may vary. For eg =>
@@ -38,10 +38,45 @@ const myFunction = function(){
 }
 
 // the return type of non-primitives is usually "Object" but for the function the return type is "function", also known as "Object function"
-console.log(typeof  myObjects);
+//console.log(typeof  myObjects);
 
 //********************* Memory (Stack and Heap) *********************
 
 // Stack (Primitive) , Heap (Non-Primitive)
+
+// Stack memory (Primitives) - The copy of variableis used to make the changes. No changes are made in the original value.
+
+// Heap memory (Non-Primitives) - The changes are made in the original value as the reference is used.
+
+let name1 = "kaush";
+let name2 = name1;
+
+// console.log(name1);
+// console.log(name2);
+
+name2 = "kaushikiiii";
+// console.log(name1);
+// console.log(name2);
+
+let user1 = {
+    email:"user1@gmail.com",
+    naam: "naam1",
+}
+
+let user2 = user1;
+
+user2.email = "user2@gmail.com";
+
+console.log(user1.email);
+console.log(user2.email);
+
+
+
+
+
+
+
+
+
 
 
