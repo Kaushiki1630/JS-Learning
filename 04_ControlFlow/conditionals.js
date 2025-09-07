@@ -46,15 +46,32 @@
 
 // Working with the real life situations
 
-const userLoggedIn = true;
-const debitCard = true;
-const loggedInFromGoogle=false;
-const loggedInFromEmail=true;
+// const userLoggedIn = true;
+// const debitCard = true;
+// const loggedInFromGoogle=false;
+// const loggedInFromEmail=true;
 
-if(userLoggedIn && debitCard){
-    console.log("Allow to buy courses");
-}
+// if(userLoggedIn && debitCard){
+//     console.log("Allow to buy courses");
+// }
 
-if(loggedInFromEmail || loggedInFromGoogle){
-    console.log("User Logged In");
-}
+// if(loggedInFromEmail || loggedInFromGoogle){
+//     console.log("User Logged In");
+// }
+
+
+// *****Nullish Coalescing Operator (??)
+
+// let age;
+// // age= null ?? 10;  // 10   (agar first pr null ya undefined aa jaye toh hamesha second wali value return krega)
+// age = 11 ?? 12;      // 11  (agar null ya undefined nahi hai first pr toh hamesha first value return krega)
+
+// console.log(age);
+
+
+// ***** TERNIARY OPERATOR *****
+
+const age= 10;
+
+console.log((age==20) ? true : false);
+
