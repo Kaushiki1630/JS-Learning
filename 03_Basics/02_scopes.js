@@ -39,5 +39,17 @@ if(true){
 // console.log(username);
 
 // ++++++++++++++++++++ interesting +++++++++++++++++++++
+//(Hosting of the function)
 
+console.log(addOne(3));
 
+function addOne(num){
+    return num+1;
+}
+// addOne(3);
+
+console.log(addTwo(4));
+const addTwo = function(num){
+    return num+2;
+}
+// addTwo(4);
