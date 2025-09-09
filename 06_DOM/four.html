@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM</title>
 </head>
-<body>
-    
+<body style="background-color: #212121; color: #fff;">
+    <div>
+        <ul class="language">
+            <li>JavaScript</li>
+        </ul>
+    </div>
 </body>
+<script>
+    function addLanguage(languageName){
+        const li= document.createElement('li');
+        li.innerHTML=`${languageName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage('Python');
+    addLanguage('Java');
+
+    // optimized function for adding an language
+
+    function addOptiLang(langName){
+        const li= document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLang("C++");
+
+    // Edit an element
+    // For editing an element,you need to first select it.
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+    const newLi = document.createElement('li');
+    newLi.textContent='Mojo';
+    secondLang.replaceWith(newLi);
+
+    const firstLang = document.querySelector('li');
+    firstLang.outerHTML='<li>TypeScript</li>';
+
+    // remove an element
+    const lastLang = document.querySelector('li:nth-child(3)');
+    lastLang.remove();
+    
+</script>
 </html>
