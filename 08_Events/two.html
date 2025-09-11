@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>JavaScript Learning</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML='Kaushiki is Learning Js';
+    }
+
+    const changeMe = setTimeout(changeText, 5000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe);
+        console.log("STOPPPPEDDD!");
+        
+    })
+
+
+    // setInterval(function(){
+    //     console.log("Kim Taehyung");
+    // }, 1000);
+
+
+</script>
+</html>
