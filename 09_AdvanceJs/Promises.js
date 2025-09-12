@@ -69,3 +69,5 @@ promiseFour.then((user)=> {
 }).finally(() => console.log("This is finally block. This runs always, either the function is rejected or resolved."))
 
 
+// way 5
+
