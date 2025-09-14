@@ -6,7 +6,8 @@
     <title>Closure</title>
 </head>
 <body>
-    
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
 </body>
 <script>
     // function init(){
@@ -20,28 +21,65 @@
 
     // init();
 
-    // Example
+    // Example - Lexical Scoping
 
-    function outer(){
-        let username = "hitesh"
-        console.log("OUTER", secret);
-        function inner(){
-            let secret = "my123"
-            console.log("inner", username);
-        }
-        function innerTwo(){
-            console.log("innerTwo", username);
-            console.log(secret);
-        }
-        inner()
-        innerTwo()
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
 
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+    // 
+    
+    
+    // Example - Closure
+
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+</script>
+<script>
+    // document.getElementById('orange').addEventListener('click', function(){
+    //     document.body.style.backgroundColor='orange';
+    // });
+
+    // document.getElementById('green').addEventListener('click', function(){
+    //     document.body.style.backgroundColor='green';
+    // });
+
+    // aab agar yeh kaam hame 1000 buttons pr krna pad jaye toh??
+    // humne upar jaise kiya, vaise nahi krenge, ek function lenge
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor= `${color}`;
+
+        return function(){
+            document.body.style.backgroundColor= `${color}`;
+        }
     }
-    outer()
-    console.log("TOO OUTER", username);
 
-
-
-
+    document.getElementById('orange').onclick = clickHandler('orange');
+    
+    document.getElementById('green').onclick = clickHandler('green');
 </script>
 </html>
